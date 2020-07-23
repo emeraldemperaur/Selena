@@ -10,8 +10,8 @@ System Requirements:
 	    Windows OS
 	    macOS
 	    Linux
-	Administrator Permission Level (Required)
-	Web Client Driver(s) (Gecko, Chrome, MSEdge, Opera, IE...)
+	>> Administrator Permission Level (Required)
+	>> Web Client Driver(s) (Gecko, Chrome, MSEdge, Opera, IE...)
 
 PyPI Package Requirements:
     Python 3.8.2+
