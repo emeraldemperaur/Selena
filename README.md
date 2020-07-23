@@ -14,14 +14,14 @@ System Requirements:
 	Web Client Driver(s) (Gecko, Chrome, MSEdge, Opera, IE...)
 
 PyPI Package Requirements:
-Python 3.8.2+
-ipython
-selenium
-pytest
-pytest-ordering
-pytest-html
-Flask
-pandas
-lxml
-xlrd
+    Python 3.8.2+
+    ipython
+    selenium
+    pytest
+    pytest-ordering
+    pytest-html
+    Flask
+    pandas
+    lxml
+    xlrd
 ```````````````````````
