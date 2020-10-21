@@ -107,7 +107,7 @@ sign_in = clicker.link_text(x_driver, sign_in_link_text, 3)
 email_input = "//*[@id='id_userLoginId']"
 password_input = "//*[@id='id_password']"
 email_address = "egwim.emeka@gmail.com"
-password = "30@Enterprise"
+password = ""
 sign_in_btn_path = "//*[@id='appMountPoint']/div/div[3]/div/div/div[1]/form/button"
 email_add = filler.x_path(email_input, email_address)
 time.sleep(3)
