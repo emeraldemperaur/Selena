@@ -15,7 +15,6 @@ selena_file_repo = "File Repository"
 selena_snapshot_dir = "Snapshot"
 selena_log_dir = "Log Diary"
 
-
 # selena_directory_list = [selena_root_dir, selena_reports_dir, selena_assets_dir,
 #                         selena_file_repo, selena_snapshot_dir, selena_log_dir]
 
