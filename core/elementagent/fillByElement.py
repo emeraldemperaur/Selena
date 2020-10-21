@@ -1,12 +1,9 @@
-import time
-
 from selenium.webdriver.common.by import By
 
 import core.preferences.corepreferences as selenapreferences
 import core.preferences.init_x_driver as xDriver
 import core.preferences.log_manager as selena_logger
 from core.elementagent import element_agent
-from core.elementagent.clickByElement import clickByElement
 from core.webclient_tools import browser_agent
 from core.webclient_tools import window_manager
 
@@ -94,54 +91,54 @@ class fillByElement:
                 return None
 
 
-x_driver.get("https://www.netflix.com/ca/")
-time.sleep(3)
-clicker = clickByElement()
-filler = fillByElement()
-notification_path = "//*[@id='cookie-disclosure']/div/button"
-by_locator_type = By.XPATH
-notice_btn = clicker.explicit_locator(x_driver, by_locator_type, notification_path, 3)
-sign_in_link_text = "Sign In"
-time.sleep(5)
-sign_in = clicker.link_text(x_driver, sign_in_link_text, 3)
-email_input = "//*[@id='id_userLoginId']"
-password_input = "//*[@id='id_password']"
-email_address = "egwim.emeka@gmail.com"
-password = "30@Enterprise"
-sign_in_btn_path = "//*[@id='appMountPoint']/div/div[3]/div/div/div[1]/form/button"
-email_add = filler.x_path(email_input, email_address)
-time.sleep(3)
-pass_code = filler.x_path(password_input, password)
-sign_in_btn = clicker.x_path(x_driver, sign_in_btn_path, 3)
-page_source = _browser_tools.get_page_source(x_driver, "Netflix | Home")
-sign_in_test = clicker.link_text(x_driver, sign_in_link_text, 3)
-if sign_in_test is None:
-    print("-->| Selenium Exception Override Successful")
-time.sleep(6)
-netflix_home_selfie = _browser_tools.get_page_selfie(x_driver, "Netflix Account")
-avatar_xpath = "//*[@id='appMountPoint']/div/div/div[1]/div[1]/div[2]/div/div"
-my_account_avatar = _browser_tools.get_element_selfie(x_driver, by_locator_type, avatar_xpath, "User Profiles")
-emeka_user_path = "//*[@id='appMountPoint']/div/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/div/a/div/div"
-emeka_user_btn = clicker.x_path(x_driver, emeka_user_path, 4)
-time.sleep(6)
-scroll_down = _browser_tools.do_viewport_scroll(x_driver, "Down")
-if not scroll_down:
-    print("-->| Scroll Down Action Failed")
-time.sleep(6)
-scroll_up = _browser_tools.do_viewport_scroll(x_driver, "Up")
-if not scroll_up:
-    print("-->| Scroll Up Action Failed")
-time.sleep(6)
-continue_watching_title = "//*[text() = 'Continue Watching for Emeka']"
-popular_on_netflix_title = "//*[text() = 'Popular in Netflix']"
-continue_watching = _browser_tools.scroll_to_element(x_driver, By.XPATH, continue_watching_title)
-if not continue_watching:
-    print("-->| Scroll to Element Action Failed")
-continue_watching_selfie = _browser_tools.get_page_selfie(x_driver, "Continue Watching")
-time.sleep(9)
-drag_drop_test = _window_manager.drag_n_drop(x_driver, continue_watching_title, popular_on_netflix_title)
-if drag_drop_test is False:
-    print("Drag and Drop Test Fail Successful")
-time.sleep(6)
-x_driver.quit()
+# x_driver.get("https://www.netflix.com/ca/")
+# time.sleep(3)
+# clicker = clickByElement()
+# filler = fillByElement()
+# notification_path = "//*[@id='cookie-disclosure']/div/button"
+# by_locator_type = By.XPATH
+# notice_btn = clicker.explicit_locator(x_driver, by_locator_type, notification_path, 3)
+# sign_in_link_text = "Sign In"
+# time.sleep(5)
+# sign_in = clicker.link_text(x_driver, sign_in_link_text, 3)
+# email_input = "//*[@id='id_userLoginId']"
+# password_input = "//*[@id='id_password']"
+# email_address = "egwim.emeka@gmail.com"
+# password = ""
+# sign_in_btn_path = "//*[@id='appMountPoint']/div/div[3]/div/div/div[1]/form/button"
+# email_add = filler.x_path(email_input, email_address)
+# time.sleep(3)
+# pass_code = filler.x_path(password_input, password)
+# sign_in_btn = clicker.x_path(x_driver, sign_in_btn_path, 3)
+# page_source = _browser_tools.get_page_source(x_driver, "Netflix | Home")
+# sign_in_test = clicker.link_text(x_driver, sign_in_link_text, 3)
+# if sign_in_test is None:
+#     print("-->| Selenium Exception Override Successful")
+# time.sleep(6)
+# netflix_home_selfie = _browser_tools.get_page_selfie(x_driver, "Netflix Account")
+# avatar_xpath = "//*[@id='appMountPoint']/div/div/div[1]/div[1]/div[2]/div/div"
+# my_account_avatar = _browser_tools.get_element_selfie(x_driver, by_locator_type, avatar_xpath, "User Profiles")
+# emeka_user_path = "//*[@id='appMountPoint']/div/div/div[1]/div[1]/div[2]/div/div/ul/li[1]/div/a/div/div"
+# emeka_user_btn = clicker.x_path(x_driver, emeka_user_path, 4)
+# time.sleep(6)
+# scroll_down = _browser_tools.do_viewport_scroll(x_driver, "Down")
+# if not scroll_down:
+#     print("-->| Scroll Down Action Failed")
+# time.sleep(6)
+# scroll_up = _browser_tools.do_viewport_scroll(x_driver, "Up")
+# if not scroll_up:
+#     print("-->| Scroll Up Action Failed")
+# time.sleep(6)
+# continue_watching_title = "//*[text() = 'Continue Watching for Emeka']"
+# popular_on_netflix_title = "//*[text() = 'Popular in Netflix']"
+# continue_watching = _browser_tools.scroll_to_element(x_driver, By.XPATH, continue_watching_title)
+# if not continue_watching:
+#     print("-->| Scroll to Element Action Failed")
+# continue_watching_selfie = _browser_tools.get_page_selfie(x_driver, "Continue Watching")
+# time.sleep(9)
+# drag_drop_test = _window_manager.drag_n_drop(x_driver, continue_watching_title, popular_on_netflix_title)
+# if drag_drop_test is False:
+#     print("Drag and Drop Test Fail Successful")
+# time.sleep(6)
+# x_driver.quit()
 
